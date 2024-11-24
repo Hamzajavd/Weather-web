@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="searching">
+        <button onclick="getWeather()" id="btn1"><i class="fa-solid fa-magnifying-glass"></i></button>
+         <input type="text" id="searchbar" placeholder="Enter the City Name....">
+</div>
+    <div class="btn">
+    <button onclick="getCurrentLocation()" class="btn2"><i class="fa-solid fa-globe"></i>Current Location</button>
+</div>
+    </div>
+
+                                                       <!-- Weather containers -->
+
+                                    
+    <div id="container">
+        <h1 id="heading">Day</h1>
+        <div id="Current">
+           <h1>__&#176; <img class="sun" src=""></img></h1>
+           <h5 class="Date">Date : --</h5>
+           <h5 class="Sunrise">Time : --</h5>
+           <h5 id="Sunset">Wind Speed : --</h5>
+        </div>
+   </div>
+                                                              <!-- Same containers -->
+
+   <div class="flatcontainer">
+    <h1 class="icons"><i class="fa-solid fa-globe"></i>
+    </h1>
+    <div id="icon1">
+        <h4 class="h4">Country</h4>
+       <h1 class="world"></h1>
+    </div>
+</div>
+
+
+<div class="flatcontainer2">
+    <h1 class="icons2"><i class="fa-solid fa-cloud"></i>
+    </h1>
+    <div id="icon2">
+        <h4>Status</h4>
+       <h1><img class="conditionicon" src=""></img></h1>
+    </div>
+</div>
+
+
+<div class="flatcontainer3">
+    <h1 class="icons3">
+        <i class="fa-solid fa-id-badge"></i>
+    </h1>
+    <div id="icon3"> 
+        <h4>ID</h4>
+       <h1 class="ID"></h1>
+    </div>
+</div>
+
+<div class="flatcontainer4">
+    <h1 class="icons4"><i class="fa-solid fa-up-long"></i>
+    </h1>
+    <div id="icon4">
+        <h4>Lon</h4>
+       <h1 class="lon"></h1>
+    </div>
+</div>
+
+<div class="flatcontainer5">
+    <h1 class="icons5"><i class="fa-solid fa-down-long"></i>
+    </h1>
+    <div id="icon5">
+        <h4>Lat</h4>
+       <h1 class="lat"></h1>
+    </div>
+</div>
+
+<div class="flatcontainer6">
+    <h1 class="icons6"><i class="fa-solid fa-wind"></i>
+    </h1>
+    <div id="icon6">
+        <h4>speed</h4>
+       <h1 class="Pressure"></h1>
+    </div>
+</div>
+
+
+  
+
+
+    <input type="checkbox">
+    <!-- Button to toggle the sidebar -->
+    <div class="toggle-btn" onclick="toggleSidebar()">
+       <span id="toggleicon"> <i class="fa-solid fa-bars"></span></i>
+    </div>
+
+                                                             <!-- Chance of rain -->
+<div class="container2">
+   
+     
+
+    <h1 id="heading2">Weekly</h1> 
+    <h1 class="monthly">Monthly</h1>
+    <h4>Wind Speed</h4>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+    <!-- <h1 class="rainper"><span class="percentsign"></span></h1> -->
+    <div id="Current2">
+       
+</div>
+
+<div class="container3">
+    
+    <div class="container4">TODAY'S OVERVIEW</div>
+    <div class="windstatus">WEATHER UPDATE</div>
+    <h1>CURRENT TIME</h1>
+    
+<div class="smallcontainer">
+    <canvas id="bar"></canvas>
+
+</div>
+<div class="smallcontainer2">
+    <div class="tme">
+        <h1  id="hours"></h1>
+        <h1  id="minutes"></h1>
+        <h1  id="seconds"></h1>
+    </div>
+</div>
+
+
+
+  <div class="sidebar">
+        <ul>
+            <li><a href="#"><span class="usericon"><i class="fa-solid fa-user"></span></i>Profile</a></li>
+            <li><a href="#"><span class="pen"><i class="fa-solid fa-pen-nib"></span></i>Overview</a></li>
+            <li><a href="#"><span class="cloud"><i class="fa-solid fa-cloud"></span></i>Forecast</a></li>
+            <li><a href="#"><span class="check"><i class="fa-solid fa-list-check"></span></i>Task</a></li>
+            <li><a href="#"><span class="newpaper"><i class="fa-solid fa-newspaper"></span></i>News</a></li>
+            <li><a href="#"><span class="phone"><i class="fa-solid fa-phone"></span></i>Contact us</a></li>
+        </ul>
+    </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
+
+
+
