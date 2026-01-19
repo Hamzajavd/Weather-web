@@ -37,7 +37,7 @@ function updateForecastChart(forecastData) {
 
 function getWeather() {
     let city = document.querySelector("#searchbar").value;
-    let API_key = "9f8bc391ed32f4907fb11d38547fe1a1"
+    
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`)
         .then(function (response) {
             console.log(response);
